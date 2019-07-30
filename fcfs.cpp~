@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int i,br[20],wt[20],tt[20],j;
+cout<<"enter the no.of process: ";
+cin>>i;
+for(j=0;j<i;j++)
+	{
+		cout<<" Burst time for p["<<j+1<<"]";
+		cin>>br[j];
+	}
+wt[0]=0;
+	{
+		for(j=1;j<i;j++)
+		{	
+			wt[j]+=br[j+1];
+			cout<<br[j]<<"  wait time"<<wt[j];
+		}
+		
+	}
+return 0;
+}
+			
